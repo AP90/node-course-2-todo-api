@@ -36,7 +36,7 @@ app.get("/todos/:id", (req, res) => {
 
     //validate id  - if not respond with 404
     if (!ObjectID.isValid(id)) {
-        return res.send(404).send();
+        return res.sendStatus(404).send();
     };
  
     //id send back 404 - with empty body
